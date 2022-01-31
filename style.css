@@ -1,0 +1,126 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --content-width: 400px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: lightskyblue;
+    color: var(--primary-dark);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+.header {
+    padding: 10px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+
+button {
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 3px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    color: white;
+    line-height: 20px;
+    background-color: lightpink;
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 1px 10px 0 rgba(240, 240, 240, 1);
+}
+
+.settings {
+    display: flex;
+    justify-content: space-between;
+    width: calc(75vw + 40px);
+    max-width: calc(var(--content-width) + 40px);
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.settings > * {
+    flex: 1 1 auto;
+}
+
+.size-value {
+    text-align: center;
+}
+
+.slider {
+    margin-left: 33%;
+    background: pink;
+    position: relative;
+    height: 100%;
+    width: 500px;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: lightsteelblue;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 8px;
+}
+
+.grid-wrapper {
+    height: 75vw;
+    width: 75vw;
+    max-height: var(--content-width);
+    max-width: var(--content-width);
+    margin: 30px auto;
+    position: relative;
+}
+
+.grid-wrapper:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    right: -15px;
+    left: -15px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.grid-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    right: -15px;
+    left: -15px;
+    background-color: #ffffff;
+    z-index: -2;
+}
+
+.grid > * {
+    height: 100%;
+    background-color: lightslategray;
+    transition: all 0.5s;
+}
